@@ -427,7 +427,7 @@
     .cv-section[aria-label="Notable projects"] { display:none !important; }
 
     /* Footer */
-    .cv-footer { border-top:0.5pt solid #ccc; margin-top:6pt; padding-top:6pt; }
+    .cv-footer { margin-top:6pt; padding-top:6pt; }
     .cv-footer-left, .cv-footer-right { color:#888 !important; font-size:7pt; }
 
     h2, h3 { page-break-after:avoid; }
