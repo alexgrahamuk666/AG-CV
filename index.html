@@ -39,11 +39,11 @@
       <button class="cv-action-btn" onclick="downloadPDF()" title="Download as PDF" aria-label="Download PDF">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2H4a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V6M9 2l4 4M9 2v4h4M8 9v4M6 11l2 2 2-2"/></svg>
         <span>PDF</span>
-      </button><!--
+      </button>
       <button class="cv-action-btn" onclick="downloadDOC()" title="Download as Word document" aria-label="Download Word doc">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2H4a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V6M9 2l4 4M9 2v4h4M5 9h6M5 11h4"/></svg>
         <span>Word</span>
-      </button>-->
+      </button>
     </div>
   </nav>
 
@@ -471,7 +471,7 @@ function downloadDOC() {
   var url  = URL.createObjectURL(blob);
   var link = document.createElement('a');
   link.href     = url;
-  link.download = 'alex-graham-cv.doc';
+  link.download = 'a-graham-cv.doc';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
