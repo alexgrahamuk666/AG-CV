@@ -291,10 +291,10 @@
   /* ── Footer ── */
   .cv-footer {
     /* border-top:var(--rule); */
-    padding:0px 0 0;
+    padding:0px;
     display:flex; align-items:center; justify-content:space-between;
     flex-wrap:wrap; gap:12px;
-    margin-top:16px;
+    margin-top:26px;
   }
   .cv-footer-left {
     font-family:'Epilogue',sans-serif; font-size:0.72rem;
