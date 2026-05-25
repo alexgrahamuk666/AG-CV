@@ -334,13 +334,17 @@
      Clean, semantic, no colour backgrounds, no decorations.
      Black ink on white. Ready for PDF/Word conversion.
   ════════════════════════════════════════════════════════ */
-  @media print {
+@media print {
     @page {
       margin:12mm 14mm;
       size:A4;
     }
+
+    * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
     body {
       background:white !important;
+      color:black !important;
       font-size:9pt;
       font-family:'Epilogue',sans-serif;
     }
@@ -362,13 +366,14 @@
       page-break-inside:avoid;
       margin-bottom:0;
     }
-    .cv-kicker {  font-size:6.5pt; margin-bottom:6pt; }
+    .cv-kicker { color:black !important; font-size:6.5pt; margin-bottom:6pt; }
     .cv-kicker::before { background:black !important; }
-    .cv-name { font-size:28pt;  letter-spacing:-1pt; line-height:0.9; }
-    .cv-title {  font-size:9pt; margin-top:6pt; }
-    .cv-contact {font-size:8pt; line-height:1.7; }
-    .cv-contact a {  }
-    .cv-contact-label { font-size:6pt; margin-top:2pt; }
+    .cv-name { font-size:28pt; color:black !important; letter-spacing:-1pt; line-height:0.9; }
+    .cv-name .period { color:black !important; }
+    .cv-title { color:#333 !important; font-size:9pt; margin-top:6pt; }
+    .cv-contact { color:black !important; font-size:8pt; line-height:1.7; }
+    .cv-contact a { color:black !important; }
+    .cv-contact-label { color:#666 !important; font-size:6pt; margin-top:2pt; }
 
     /* Statement — glued to header, no gap, no orphan break */
     .cv-statement {
@@ -380,9 +385,9 @@
       page-break-inside:avoid;
       margin-top:0;
     }
-    .cv-section-label {  font-size:6.5pt; }
-    .cv-statement-text {  font-size:9pt; line-height:1.6; }
-    .cv-statement-text strong {  }
+    .cv-section-label { color:#555 !important; font-size:6.5pt; }
+    .cv-statement-text { color:#222 !important; font-size:9pt; line-height:1.6; }
+    .cv-statement-text strong { color:black !important; }
 
     /* Sections */
     .cv-section {
@@ -393,29 +398,29 @@
     }
 
     /* Experience */
-    .exp-role { font-size:10pt;  font-weight:700; }
+    .exp-role { font-size:10pt; color:black !important; font-weight:700; }
     .exp-dates {
       background:none !important; border:none !important;
-      font-size:7.5pt; padding:0; font-weight:600;
+      color:#555 !important; font-size:7.5pt; padding:0; font-weight:600;
     }
-    .exp-company { font-size:8.5pt; margin-bottom:4pt; }
-    .exp-desc { font-size:8pt; line-height:1.6; }
+    .exp-company { color:#555 !important; font-size:8.5pt; margin-bottom:4pt; }
+    .exp-desc { color:#333 !important; font-size:8pt; line-height:1.6; }
     .exp-desc p { margin-bottom:4pt; }
     .exp-tags { display:none !important; }
     .exp-item { page-break-inside:avoid; margin-bottom:2pt; }
 
     /* Education */
-    .edu-qual {  font-size:9pt; }
-    .edu-place { font-size:8pt; }
-    .edu-detail { font-size:7.5pt; }
-    .edu-dates { font-size:7.5pt; }
+    .edu-qual { color:black !important; font-size:9pt; }
+    .edu-place { color:#555 !important; font-size:8pt; }
+    .edu-detail { color:#666 !important; font-size:7.5pt; }
+    .edu-dates { color:#555 !important; font-size:7.5pt; }
     .edu-item { page-break-inside:avoid; }
 
     /* Skills — use standard list bullets for reliable print */
     .skills-grid { grid-template-columns:1fr 1fr 1fr; gap:6pt; }
-    .skill-group-title { font-size:8pt; border-bottom:0.5pt solid #ccc; padding-bottom:2pt; margin-bottom:4pt; }
+    .skill-group-title { color:black !important; font-size:8pt; border-bottom:0.5pt solid #ccc; padding-bottom:2pt; margin-bottom:4pt; }
     .skill-list { list-style:disc; padding-left:10pt; }
-    .skill-list li { font-size:7.5pt; padding-left:0; line-height:1.5; }
+    .skill-list li { color:#333 !important; font-size:7.5pt; padding-left:0; line-height:1.5; }
     .skill-list li::before { display:none !important; }
 
     /* Notable — hidden to save pages */
@@ -423,7 +428,7 @@
 
     /* Footer */
     .cv-footer { margin-top:6pt; padding-top:6pt; }
-    .cv-footer-left, .cv-footer-right {  font-size:7pt; }
+    .cv-footer-left, .cv-footer-right { color:#888 !important; font-size:7pt; }
 
     h2, h3 { page-break-after:avoid; }
   }
